@@ -19,10 +19,11 @@ namespace FilmNotebook.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder); // Identity
+            base.OnModelCreating(modelBuilder); // Ważne dla Identity!
 
             modelBuilder.Entity<FilmCategory>()
                 .HasKey(fc => new { fc.FilmId, fc.CategoryId }); // Definicja klucza złożonego
         }
     }
 }
+
